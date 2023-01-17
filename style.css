@@ -1,0 +1,123 @@
+:root {
+    /* colors */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%); 
+    --dark-gray: hsl(0, 0%, 59%);
+    --white: hsl(0, 0%, 100%);
+    /* fonts */
+    --font-kumbh: 'Kumbh Sans', sans-serif;
+    --font-regular: 400;
+    --font-bold: 700;
+}
+body {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--dark-cyan);
+    font-family: var(--font-kumbh);
+    font-weight: var(--font-regular);
+}
+main::after {
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(./images/bg-pattern-top.svg);
+    z-index: -10;
+    background-position-x: left;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-330deg);
+    overflow: hidden;
+}
+main::before {
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(./images/bg-pattern-bottom.svg);
+    z-index: -10;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-340deg);
+    overflow: hidden;
+}
+main {
+    width: 350px;
+    border-radius: 1rem;
+    background-color: var(--white);
+    overflow: hidden;
+    
+}
+.card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;  
+   gap: 1rem;  
+}
+.card:nth-child(2) {
+    background-color: blue;
+}
+.avatar img{
+    margin-top: -60%;
+    border-radius: 50%;
+    border: 0.3rem solid var(--white);
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+.info__name__age {
+    display: flex;
+    align-items: center;
+}
+.info__name__age h1 {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+.info__name__age span {
+    color: var(--dark-gray);
+}
+.info p {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+/* Stats section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    border-top: 0.05rem solid var(--dark-gray);
+    margin: 1rem 0;
+    padding: 1rem 0 0 0;
+    text-align: center;
+}
+.stats__item span {
+    font-weight: var(--font-bold);
+}
+.stats__item p {
+    font-weight: var(--font-regular);
+    font-size: 0.7rem;
+    color: var(--dark-gray);
+}
+
+
+
+/* Attribution styles */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
